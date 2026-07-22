@@ -1,0 +1,124 @@
+.network {
+  background: var(--loam);
+  padding-block: 6rem;
+  position: relative;
+  overflow: hidden;
+}
+.network::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 80% at 90% 20%, rgba(67, 92, 70, 0.2) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+  margin-bottom: 3rem;
+}
+.header h2 {
+  font-size: clamp(1.9rem, 3.5vw, 2.7rem);
+  color: var(--parchment);
+  margin-bottom: 0.8rem;
+}
+.header p {
+  color: var(--parchment-2);
+  max-width: 560px;
+  font-size: 1rem;
+}
+
+/* County grid */
+.countyGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.countyCard {
+  background: rgba(239, 230, 210, 0.05);
+  border: 1px solid rgba(239, 230, 210, 0.12);
+  border-radius: 6px;
+  padding: 1.8rem 1.5rem;
+  transition: border-color var(--transition), background var(--transition), transform var(--transition);
+}
+.countyCard:hover {
+  border-color: rgba(192, 138, 62, 0.4);
+  background: rgba(239, 230, 210, 0.08);
+  transform: translateY(-3px);
+}
+
+.countyCard :global(.tag) { margin-bottom: 1rem; }
+
+.countyCard h3 {
+  font-family: var(--font-fraunces), 'Fraunces', serif;
+  font-size: 1.4rem;
+  color: var(--parchment);
+  margin-bottom: 0.6rem;
+}
+.countyCard p {
+  color: var(--parchment-2);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.countyStat {
+  margin-top: 1.2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(239, 230, 210, 0.1);
+  font-family: var(--font-ibm-plex-mono), 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--buni);
+}
+
+/* Pulping stations strip */
+.stationsStrip {
+  background: var(--highland);
+  border-radius: 6px;
+  padding: 1.4rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.stationsNum {
+  font-family: var(--font-fraunces), 'Fraunces', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--parchment);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.stationsLabel {
+  flex: 1;
+}
+.stationsLabel strong {
+  display: block;
+  font-family: var(--font-ibm-plex-mono), 'IBM Plex Mono', monospace;
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--parchment);
+  margin-bottom: 0.3rem;
+}
+.stationsLabel span {
+  font-size: 0.88rem;
+  color: rgba(239, 230, 210, 0.75);
+}
+
+@media (max-width: 900px) {
+  .countyGrid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 760px) {
+  .network {
+    padding-block: 4rem;
+  }
+}

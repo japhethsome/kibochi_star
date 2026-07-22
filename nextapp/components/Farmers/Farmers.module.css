@@ -1,0 +1,96 @@
+.farmers {
+  background: var(--ink);
+  padding-block: 6rem;
+  position: relative;
+  overflow: hidden;
+}
+.farmers::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 70% at 20% 60%, rgba(165, 48, 31, 0.12) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+  margin-bottom: 3.5rem;
+}
+.header h2 {
+  font-size: clamp(1.9rem, 3.5vw, 2.7rem);
+  color: var(--parchment);
+  margin-bottom: 0.8rem;
+}
+.header p {
+  color: var(--parchment-2);
+  max-width: 520px;
+}
+
+/* Steps list with vertical connector line */
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+}
+.steps::before {
+  content: '';
+  position: absolute;
+  left: 1.5rem;
+  top: 2.8rem;
+  bottom: 2.8rem;
+  width: 1px;
+  background: linear-gradient(to bottom, rgba(192, 138, 62, 0.6), rgba(192, 138, 62, 0.1));
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: 1.5rem;
+  padding-block: 1.8rem;
+  border-bottom: 1px solid rgba(239, 230, 210, 0.07);
+  align-items: start;
+}
+.step:last-child { border-bottom: none; }
+
+.stepNum {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: var(--buni);
+  color: var(--loam);
+  font-family: var(--font-ibm-plex-mono), 'IBM Plex Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.stepContent h3 {
+  font-family: var(--font-fraunces), 'Fraunces', serif;
+  font-size: 1.25rem;
+  color: var(--parchment);
+  margin-bottom: 0.5rem;
+}
+.stepContent p {
+  color: var(--parchment-2);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 760px) {
+  .farmers {
+    padding-block: 4rem;
+  }
+  .steps::before { left: 1.25rem; }
+  .step { grid-template-columns: 2.5rem 1fr; gap: 1rem; }
+  .stepNum { width: 2.5rem; height: 2.5rem; font-size: 0.75rem; }
+}
