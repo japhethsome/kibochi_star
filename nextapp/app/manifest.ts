@@ -1,0 +1,20 @@
+import { MetadataRoute } from 'next';
+
+export default function manifest(): MetadataRoute.Manifest {
+  return {
+    name: 'Kibochi Star Coffee Limited',
+    short_name: 'Kibochi Star',
+    description: 'Specialty Coffee from the Highlands',
+    start_url: '/',
+    display: 'standalone',
+    background_color: '#EFE6D2',
+    theme_color: '#2A1B14',
+    icons: [
+      {
+        src: '/logo.jpg',
+        sizes: 'any',
+        type: 'image/jpeg',
+      },
+    ],
+  };
+}

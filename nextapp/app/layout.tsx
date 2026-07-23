@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import { Fraunces, IBM_Plex_Sans, IBM_Plex_Mono } from 'next/font/google';
 import './globals.css';
-import Nav from '@/components/Nav/Nav';
-import Footer from '@/components/Footer/Footer';
 
 /* ─── Fonts ─────────────────────────────── */
 const fraunces = Fraunces({
@@ -63,9 +61,7 @@ export default function RootLayout({
       className={`${fraunces.variable} ${ibmPlexSans.variable} ${ibmPlexMono.variable}`}
     >
       <body>
-        <Nav />
         <main>{children}</main>
-        <Footer />
       </body>
     </html>
   );

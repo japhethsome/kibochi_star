@@ -9,7 +9,7 @@ const LOCATIONS = [
   { icon: '', text: 'Kericho County' },
   { icon: '', text: 'Nandi County' },
 ];
-//syill check the icons used  to ensure tat its fully functional and working well
+
 export default function Footer() {
   const year = new Date().getFullYear();
 
@@ -59,15 +59,11 @@ export default function Footer() {
             <ul>
               <li>
                 <span className={styles.icon} aria-hidden="true"></span>
-                <a href="mailto:info@kibochistarcoffee.co.ke">japhethgmail.com</a>
+                <a href="mailto:info@kibochistarcoffee.co.ke">info@kibochistarcoffee.co.ke</a>
               </li>
               <li>
                 <span className={styles.icon} aria-hidden="true"></span>
-                <a href="tel:+254700000000">+254 7jeff</a>
-              </li>
-              <li className={styles.placeholder}>
-                <span className={styles.icon} aria-hidden="true"></span>
-                <span>inquire for working contacts from  jones.</span>
+                <a href="tel:+254700000000">+254 700 000 000</a>
               </li>
             </ul>
           </div>
