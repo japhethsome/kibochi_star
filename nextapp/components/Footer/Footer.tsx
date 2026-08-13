@@ -58,12 +58,13 @@ export default function Footer() {
             <h4>Contact</h4>
             <ul>
               <li>
-                <span className={styles.icon} aria-hidden="true"></span>
-                <a href="mailto:info@kibochistarcoffee.co.ke">info@kibochistarcoffee.co.ke</a>
+                <a href="mailto:info@kibochicoffee.co.ke">info@kibochicoffee.co.ke</a>
               </li>
               <li>
-                <span className={styles.icon} aria-hidden="true"></span>
-                <a href="tel:+254700000000">+254 700 000 000</a>
+                <a href="tel:+254722332383">+254 722 332 383</a>
+              </li>
+              <li className={styles.placeholder}>
+                <a href="#emails">➔ View All 5 Department Emails</a>
               </li>
             </ul>
           </div>

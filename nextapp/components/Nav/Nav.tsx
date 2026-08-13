@@ -10,6 +10,7 @@ const NAV_LINKS = [
   { href: '#network', label: 'Mill & Network' },
   { href: '#quality', label: 'Our Coffee' },
   { href: '#farmers', label: 'Farmers' },
+  { href: '#emails',  label: 'Emails Directory' },
   { href: '#contact', label: 'Contact' },
 ];
 
